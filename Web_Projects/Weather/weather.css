@@ -1,0 +1,128 @@
+.weather-container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Page Title */
+h1 {
+    color: #7a5cff;
+    text-shadow: 0 0 10px rgba(122, 92, 255, 0.6);
+    margin-bottom: 2rem;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+    background: #1b1b2f;
+    color: #e0e0e0;
+    text-shadow: 0 0 5px rgba(0,198,255,0.7);
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+}
+
+.search-box button {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-box button:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}
+
+/* Weather Info Card */
+.weather-info {
+    position: relative;
+    background: #1b1b2f;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: default;
+    overflow: hidden;
+}
+
+/* Neon glowing background animation */
+.weather-info::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff, #01f2fa, #7a5cff);
+    animation: rotateGlow 6s linear infinite;
+    filter: blur(30px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.weather-info h2 {
+    color: #01f2fa;
+    text-shadow: 0 0 5px rgba(0,198,255,0.7);
+    margin-bottom: 1rem;
+}
+
+.weather-info p {
+    color: #aaa;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.weather-info img {
+    margin-bottom: 1rem;
+}
+
+/* Back Button */
+.back-link {
+    display: block;
+    width: max-content;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}
+
+/* Neon animation */
+@keyframes glowing {
+    from { box-shadow: 0 0 5px rgba(170,0,255,0.6), 0 0 15px rgba(170,0,255,0.7); }
+    to { box-shadow: 0 0 20px rgba(0,198,255,0.7), 0 0 40px rgba(0,198,255,0.9); }
+}

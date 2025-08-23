@@ -1,0 +1,127 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0f0f1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Title */
+h1 {
+    color: #7a5cff;
+    text-align: center;
+    margin: 2rem 0;
+    text-shadow: 0 0 10px rgba(122, 92, 255, 0.6);
+}
+
+/* Calculator Container */
+.calculator-container {
+    text-align: center;
+}
+
+/* Calculator */
+.calculator {
+    background: #1b1b2f;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 350px;
+    margin: auto;
+}
+
+/* Display */
+.display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: right;
+    background: #0f0f1a;
+    color: #fff;
+    box-shadow: inset 0 0 5px rgba(0,198,255,0.7);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Button Hover Glow */
+.btn:hover {
+    transform: translateY(-5px);
+    animation: glowing 1.6s infinite alternate;
+}
+
+/* Special Buttons */
+.operator {
+    background: linear-gradient(45deg, #ff4d6d, #ffb84d);
+}
+
+.clear {
+    background: linear-gradient(45deg, #ff3f3f, #ff6f6f);
+}
+
+.equal {
+    grid-column: span 4;
+    background: linear-gradient(45deg, #7aff95, #00ffa0);
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+    from {
+        box-shadow: 0 0 5px rgba(170,0,255,0.6),
+                    0 0 15px rgba(170,0,255,0.7);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(0,198,255,0.7),
+                    0 0 40px rgba(0,198,255,0.9);
+    }
+}
+
+/* Back Button */
+.back-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}

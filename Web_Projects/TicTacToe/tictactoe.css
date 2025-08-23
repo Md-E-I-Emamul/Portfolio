@@ -1,0 +1,97 @@
+.game-container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #7a5cff;
+    text-shadow: 0 0 5px rgba(122, 92, 255, 0.7), 0 0 10px rgba(122, 92, 255, 0.6);
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #1b1b2f;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #01f2fa;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-shadow: 0 0 5px rgba(0,198,255,0.7);
+}
+
+.cell:hover {
+    transform: translateY(-5px);
+    animation: glowing 1.6s infinite alternate;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+/* Neon animation for symbols */
+.cell.x {
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+    animation: glowingX 1.6s infinite alternate;
+}
+
+.cell.o {
+    color: #00fff2;
+    text-shadow: 0 0 5px #00fff2, 0 0 10px #00fff2, 0 0 20px #00fff2;
+    animation: glowingO 1.6s infinite alternate;
+}
+
+/* Neon animation keyframes */
+@keyframes glowing {
+    from { box-shadow: 0 0 5px rgba(170,0,255,0.6), 0 0 15px rgba(170,0,255,0.7); }
+    to { box-shadow: 0 0 20px rgba(0,198,255,0.7), 0 0 40px rgba(0,198,255,0.9); }
+}
+
+@keyframes glowingX {
+    from { text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f; }
+    to { text-shadow: 0 0 15px #ff007f, 0 0 25px #ff007f; }
+}
+
+@keyframes glowingO {
+    from { text-shadow: 0 0 5px #00fff2, 0 0 10px #00fff2; }
+    to { text-shadow: 0 0 15px #00fff2, 0 0 25px #00fff2; }
+}
+
+/* Buttons */
+#restart, .back-link {
+    display: block;
+    width: max-content;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 1rem auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#restart:hover, .back-link:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}

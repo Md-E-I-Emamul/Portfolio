@@ -1,0 +1,109 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0f0f1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem;
+    color: #7a5cff;
+    text-shadow: 0 0 10px rgba(122, 92, 255, 0.6);
+}
+
+/* Projects Grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Project Card */
+.project-card {
+    background: #1b1b2f;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Hover Effect with Growing Shadow */
+.project-card:hover {
+    transform: translateY(-10px);
+    animation: glowing 1.6s infinite alternate;
+}
+
+@keyframes glowing {
+    from {
+        box-shadow: 0 0 10px rgba(170, 0, 255, 0.624),
+                    0 0 20px rgba(170, 0, 255, 0.787);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(0, 198, 255, 0.7),
+                    0 0 50px rgba(0, 198, 255, 0.9);
+    }
+}
+
+.project-card h2 {
+    color: #01f2fa;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #aaa;
+    margin-bottom: 1.2rem;
+}
+
+/* Buttons */
+.project-card a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.project-card a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #7a5cffaa;
+}
+
+.back-link {
+    display: block;                         
+    width: max-content;                     
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    margin: 2rem auto 3rem;                
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover: glowing animation like project card */
+.back-link:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate; /* reuse the same animation */
+}

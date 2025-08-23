@@ -1,0 +1,86 @@
+.dice-container {
+    text-align: center;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+h1 {
+    color: #7a5cff;
+    text-shadow: 0 0 10px rgba(122, 92, 255, 0.6);
+    margin-bottom: 2rem;
+}
+
+.dice-card {
+    background: #1b1b2f;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.dice-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff, #01f2fa, #7a5cff);
+    animation: rotateGlow 6s linear infinite;
+    filter: blur(30px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#roll-btn {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#roll-btn:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}
+
+#dice-result {
+    margin-top: 1rem;
+    color: #01f2fa;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(0,198,255,0.7);
+}
+
+.back-link {
+    display: block;
+    width: max-content;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #7a5cff, #00c6ff);
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+    animation: glowing 1.6s infinite alternate;
+}
+
+@keyframes glowing {
+    from { box-shadow: 0 0 5px rgba(170,0,255,0.6), 0 0 15px rgba(170,0,255,0.7); }
+    to { box-shadow: 0 0 20px rgba(0,198,255,0.7), 0 0 40px rgba(0,198,255,0.9); }
+}
