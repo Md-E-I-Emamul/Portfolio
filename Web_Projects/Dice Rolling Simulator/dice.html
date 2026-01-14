@@ -3,20 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dice Simulator</title>
+<title>Dice Guessing Game</title>
+
 <link rel="stylesheet" href="../webproject.css">
 <link rel="stylesheet" href="dice.css">
 </head>
+
 <body>
-<div class="dice-container">
-    <h1>Dice Simulator</h1>
+<div class="page-bg">
+    <div class="dice-container">
 
-    <div class="dice-card">
-        <button id="roll-btn">Roll Dice 🎲</button>
-        <p id="dice-result">Roll a dice to see the number!</p>
+        <h1>🎲 Dice Guessing Game</h1>
+        <p class="subtitle">Guess a number (1–6) and test your luck</p>
+
+        <div class="dice-card">
+
+            <input 
+                type="number" 
+                id="guess-input" 
+                placeholder="Enter number (1-6)"
+                min="1" 
+                max="6"
+            >
+
+            <button id="roll-btn">Roll Dice 🎲</button>
+
+            <p id="dice-result">Make a guess and roll the dice!</p>
+
+            <div class="score-board">
+                <div class="score win">Wins: <span id="win-count">0</span></div>
+                <div class="score miss">Misses: <span id="miss-count">0</span></div>
+            </div>
+
+            <button id="reset-btn">Reset Game 🔄</button>
+        </div>
+
+        <a href="../Web_Project.html" class="back-link">⬅ Back to Projects</a>
     </div>
-
-    <a href="../Web_Project.html" class="back-link">⬅ Back to Projects</a>
 </div>
 
 <script src="dice.js"></script>
