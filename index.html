@@ -4,110 +4,472 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad's Portfolio</title>
+  <title>Muhammad — Software Engineer & Web Developer</title>
+  <meta name="description" content="Muhammad's Portfolio - Aspiring Software Engineer specializing in modern web development and innovative solutions.">
   <link rel="stylesheet" href="style.css">
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <header>
+  <header class="header">
     <nav class="navbar">
-      <div class="logo">Muhammad<span>.</span></div>
+      <div class="logo">
+        <span class="logo-text">Muhammad</span>
+        <span class="logo-dot">.</span>
+      </div>
 
       <!-- Hamburger Button -->
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
       <!-- Nav Links -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="/Resume/resume.html" class="nav-link">Resume</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Hi, I’m <span>Muhammad</span></h1>
-      <p>I build responsive websites for small businesses and individuals.</p>
-      <a href="#projects" class="btn">See My Works</a>
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
     </div>
-    <div class="profile-img" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
-      <img src="Image/pic 1.jpg" alt="Muhammad">
-    </div>
-    <div id="hero-canvas"></div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section" data-aos="fade-right">
-    <h2>About Me</h2>
-    <p>
-      “I design responsive and user-friendly websites using HTML, CSS, and JavaScript.”
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <!-- Projects -->
-  <section id="projects" class="section" data-aos="fade-left">
-    <h2>Projects</h2>
-    <div class="project-grid">
-
-      <!-- Portfolio Resume -->
-      <a href="Resume/resume.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="project-card">
-          <h3>Portfolio Resume</h3>
-          <p>A modern portfolio Resume built with animations and 3D effects.</p>
+    
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for work</span>
         </div>
-      </a>
-
-      <!-- Web Development -->
-      <a href="Web_Projects/Web_Project.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="project-card">
-          <h3>Web Development</h3>
-          <p>Some user interactive Web Projects.</p>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Muhammad</span>
+        </h1>
+        <p class="hero-subtitle">
+          Full-Stack Web Developer & Computer Engineering Student.
+          <br>Passionate about building user-friendly solutions.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16669 10H15.8334M15.8334 10L10 4.16669M15.8334 10L10 15.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
         </div>
-      </a>
-
-      <!-- ML Model -->
-      <a href="Ml Model/ml.html" style="text-decoration:none; color:inherit; display:block;">
-      <div class="project-card">
-        <h3>ML Model</h3>
-        <p>Car price prediction using regression and ML algorithms.</p>
       </div>
-      </a>
 
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="image-wrapper">
+          <img src="Image/pic 1.jpg" alt="Muhammad - Software Engineer" loading="eager">
+          <div class="image-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">
+          Building <span class="gradient-text">Stronger Brands</span>
+          <br>Creating Impressions!
+        </h2>
+      </div>
 
-  <!-- Contact -->
-  <section id="contact" class="section" data-aos="zoom-in">
-    <h2>Contact Me</h2>
-    <p>Let’s build something great together.</p>
-    <p>Email: mdemamulislamemon0008@gmail.com</p>
-    <a href="mailto:mdemamulislamemon0008@gmail.com" class="btn">Get in Touch</a>
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+          <p class="about-description">
+            I’m a Computer Engineering student and a passionate Full-Stack Web Developer
+who enjoys building complete web applications—from designing clean user
+interfaces to developing secure and scalable backend systems.
+
+I work mainly with JavaScript, React, Node.js, Express, and MongoDB, and I
+focus on writing clean, maintainable code that solves real-world problems.
+
+As an engineering student, I have a strong foundation in data structures,
+algorithms, operating systems, and computer networks, which helps me
+understand how applications work beyond just the UI.
+
+Currently, I’m improving my full-stack skills by building real projects,
+exploring modern frameworks, and preparing myself for internships and
+industry-level development roles.
+
+          </p>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Learning</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Passion Driven</div>
+            </div>
+          </div>
+        </div>
+             
+
+        <div id="skills" class="skills-grid" data-aos="fade-left" data-aos-delay="300">
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Fronted Development</h3>
+            <ul>
+              <li>HTML5, CSS3, JavaScript (ES6+)</li>
+              <li>React.js, Tailwind CSS, Responsive Design</li>
+              <li>🎨 UI/UX basics, Accessibility</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📚</div>
+            <h3>Backend Development</h3>
+            <ul>
+              <li>Node.js, Express.js, REST APIs</li>
+              <li>MongoDB, PostgreSQL, SQL</li>
+              <li>Security Best Practices</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">☁️</div>
+            <h3>Database & Cloud</h3>
+            <ul>
+              <li>MongoDB, PostgreSQL</li>
+              <li>AWS Basics, Deployment</li>
+              <li>Data Modeling</li>            
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">👨🏼‍💻</div>
+            <h3>Programming & CS</h3>
+            <ul>
+              <li>C, C++, Java</li>
+              <li>Data Structures & Algorithms</li>
+              <li>System Design Principles</li>
+              <li>Operating Systems Basic.</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <h3>Machine Learning</h3>
+            <ul>
+              <li>Python, NumPy, Pandas, Scikit-learn</li>
+              <li>TensorFlow, Keras</li>
+              <li>Web Scraping with BeautifulSoup</li>
+            </ul>            
+          </div>
+            <div class="skill-card">
+            <div class="skill-icon">🛠</div>
+            <h3>Tools</h3>
+            <ul>
+              <li>Git, GitHub, VS Code</li>
+              <li>Docker</li>
+              <li>Postman, Jira</li>
+            </ul>            
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>Problem Solving</h3>
+            <ul>
+              <li>Competitive Programming</li>
+              <li>LeetCode, HackerRank</li>
+              <li>Algorithm Optimization (DAA)</li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+     <div class="cur">
+          <div class="cur">
+              <h3>What I’m Currently Learning </h3>
+              <br>
+              <ul >
+                <li>Advanced React (Hooks, Context, Redux)</li>
+                <li>Node.js & Express.js Deep Dive</li>
+                <li>Database Design with MongoDB & SQL</li>
+                <li>Cloud Deployment Basics (AWS)</li>
+              </ul>
+            </div>
+        </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">
+          Featured <span class="gradient-text">Projects</span>
+          <br>That Showcase My Skills
+        </h2>
+        <p class="section-description">
+          Explore my latest work showcasing web development, UI design, and machine learning projects.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a href="Resume/resume.html" class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-view">View Project →</span>
+            </div>
+            <div class="project-number">01</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Portfolio</span>
+              <span class="project-tag">Design</span>
+            </div>
+            <h3 class="project-title">Resume</h3>
+            <p class="project-description">
+              A modern portfolio resume built with stunning animations and 3D effects, showcasing my professional journey.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="Web_Projects/Web_Project.html" class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-view">View Project →</span>
+            </div>
+            <div class="project-number">02</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Web Dev</span>
+              <span class="project-tag">Interactive</span>
+            </div>
+            <h3 class="project-title">Web Development Projects</h3>
+            <p class="project-description">
+              Collection of user-interactive web projects demonstrating modern frontend techniques and creative solutions.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="Ml Model/ml.html" class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-view">View Project →</span>
+            </div>
+            <div class="project-number">03</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">ML</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">ML Price Predictor</h3>
+            <p class="project-description">
+              Car price prediction model using regression algorithms and machine learning for accurate price estimation.
+            </p>
+          </div>
+        </a>
+        <!-- Project 4 -->
+        <a href="Weather/weather.html" class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-view">View Project →</span>
+            </div>
+            <div class="project-number">04</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Weather Project</span>
+              <span class="project-tag">Interactive</span>
+            </div>
+            <h3 class="project-title">Weather App</h3>
+            <p class="project-description">
+              A responsive weather application that displays current weather conditions and forecasts for any location.
+            </p>
+          </div>
+        </a>
+        <!-- Project 5 -->
+        <a href="Programming/program.html" class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-view">View Project →</span>
+            </div>
+            <div class="project-number">05</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Programming</span>
+              <span class="project-tag">Interactive</span>
+            </div>
+            <h3 class="project-title">Programming Projects</h3>
+            <p class="project-description">
+              Collection of programming projects demonstrating proficiency in C, C++, Python, and other languages.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+          
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-right">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">
+            Let's Build Something
+            <br><span class="gradient-text">Great Together</span>
+          </h2>
+          <p class="contact-description">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Email</div>
+                <a href="mailto:mdemamulislamemon0008@gmail.com" class="contact-value">
+                  mdemamulislamemon0008@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Availability</div>
+                <div class="contact-value">Open for opportunities</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="mailto:mdemamulislamemon0008@gmail.com" class="btn btn-primary btn-large">
+            <span>Send a Message</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16669 10H15.8334M15.8334 10L10 4.16669M15.8334 10L10 15.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contact-visual" data-aos="fade-left" data-aos-delay="200">
+          <div class="contact-card">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>Currently available</span>
+              </div>
+              <h3>Ready to collaborate on your next project</h3>
+              <p>Whether you're a startup, agency, or individual, I'm here to help bring your ideas to life with clean code and creative solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Muhammad. All rights are reserved and Copyright certified .</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">Muhammad</span>
+            <span class="logo-dot">.</span>
+          </div>
+          <p class="footer-tagline">
+            Crafting digital experiences with passion and precision.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Projects</h4>
+            <ul>
+              <li><a href="Resume/resume.html">Portfolio Resume</a></li>
+              <li><a href="Web_Projects/Web_Project.html">Web Projects</a></li>
+              <li><a href="Ml Model/ml.html">ML Model</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:mdemamulislamemon0008@gmail.com">Email</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Muhammad. All rights reserved.</p>
+        <p>Made with <span class="heart">♥</span> and passion</p>
+      </div>
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script type="module" src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+  </script>
 </body>
 
-
 </html>
-
