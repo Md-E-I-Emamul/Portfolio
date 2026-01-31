@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #0f0f1a;
+    background: #000000;
     color: #e0e0e0;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -18,7 +18,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(15, 15, 26, 0.95);
+    background: rgba(57, 0, 131, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
